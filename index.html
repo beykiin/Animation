@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .oyun{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: red;
+            border: 1px solid black;
+            animation-name: animate;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-delay: 2s;
+        }
+        @keyframes animate{
+            0%{background-color: red; left: 0px; top: 0px;}
+            25%{background-color: purple; left: 100px; top: 0px; border-radius: 20px;}
+            75%{background-color: greenyellow; left: 100px; top: 100px; border-radius: 0px;}
+            100%{background-color: blue; left: 0px; top: 100px; border-radius: 20px;}
+        }
+        p{
+            display: flex;
+            justify-content: space-between;
+        }
+        .yasin{
+            border: 3px solid black;
+            border-radius: 10px;
+            background-color: white;
+            animation-name: yasin;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        @keyframes yasin{
+            0%{background-color: white; opacity: 0;}
+            100%{background-color: black; color: yellow; margin-left: 50%; font-size: 50px; border: 3px solid yellow; font-weight: 900; opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <!-- "@keyframes" anahtar kelime animasyonları yaptığımız çerçeve -->
+    <!-- "animation-name" animasyona verdiğimiz isim kesinlikle vermemiz gerekiyor. -->
+    <!-- "animation-duration" animasyonun kaç saniyede gerçekleşeceği. -->
+    <!-- "animation-delay" animasyonun gecikmesi. -->
+    <!-- "animation-iterition-count" Animasyonun kaç kez çalıştırılacağını belirler.-->
+    <!-- "animation-direction" animasyonun ileri geri gibi yönünü belirler. "normal" normal oynar, "reverse" ters yönde oynar, "alternate" önce ileri sonra geri oynar, "alternate-reverse" önce geri sonra ileri oynar. -->
+    <!-- "animation-timing-function" -->
+    <!-- "animation-fill-mode" -->
+    <!-- "animation" -->
+    <div class="oyun"></div>
+    <p><span class="yasin">YASİN BEKEN</span></p>
+</body>
+</html>
